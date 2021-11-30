@@ -3,6 +3,7 @@ ver=`curl --silent http://mirror.vorboss.net/apache/tomcat/tomcat-9/ | grep v9 |
 echo $ver
 version=`echo $ver | cut -d " " -f2`
 echo $version
+sudo apt update
 sudo apt install -y default-jdk wget git
 cd /home/$USER/
 sudo mkdir tomcat${version}
