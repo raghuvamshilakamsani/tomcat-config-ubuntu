@@ -21,3 +21,5 @@ sudo cp context.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/host-
 sudo cp tomcat-users.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/conf/tomcat-users.xml
 cd /home/$USER/tomcat${version}/apache-tomcat-9.*
 sudo sh bin/startup.sh
+echo "username: admin"
+echo "password: goodvibes"
