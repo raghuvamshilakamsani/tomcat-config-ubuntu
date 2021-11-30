@@ -5,6 +5,8 @@ version=`echo $ver | cut -d " " -f2`
 echo $version
 sudo apt update
 sudo apt install -y default-jdk wget git
+sudo cp context.xml /home/$USER/
+sudo cp tomcat-users.xml
 cd /home/$USER/
 sudo mkdir tomcat${version}
 cd /home/$USER/tomcat${version}
@@ -16,9 +18,11 @@ sudo chmod -R 755 /home/$USER/tomcat${version}/apache-tomcat-9.*
 sudo rm -rfv /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/manager/META-INF/context.xml
 sudo rm -rfv /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/host-manager/META-INF/context.xml
 sudo rm -rfv /home/$USER/tomcat${version}/apache-tomcat-9.*/conf/tomcat-users.xml
-sudo cp context.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/manager/META-INF/context.xml
-sudo cp context.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/host-manager/META-INF/context.xml
-sudo cp tomcat-users.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/conf/tomcat-users.xml
+sudo cp /home/$USER/context.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/manager/META-INF/context.xml
+sudo cp /home/$USER/context.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/host-manager/META-INF/context.xml
+sudo cp /home/$USER/tomcat-users.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/conf/tomcat-users.xml
+sudo rm -rf /home/$USER/context.xml
+sudo rm -rf /home/$USER/tomcat-users.xml
 cd /home/$USER/tomcat${version}/apache-tomcat-9.*
 sudo sh bin/startup.sh
 echo "username: admin"
