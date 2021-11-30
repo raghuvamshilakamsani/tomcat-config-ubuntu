@@ -11,7 +11,6 @@ rm -rf apache*
 sudo wget https://downloads.apache.org/tomcat/tomcat-9/v${version}/bin/apache-tomcat-${version}.tar.gz
 sudo tar -xvzf apache-tomcat-9.*
 sudo rm -rf apache*.gz
-sudo git clone https://github.com/adhig93/tomcat-config
 sudo chmod -R 755 /home/$USER/tomcat${version}/apache-tomcat-9.*
 sudo cp ./tomcat-config/context.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/manager/META-INF/context.xml
 sudo cp ./tomcat-config/context.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/host-manager/META-INF/context.xml
