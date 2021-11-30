@@ -10,7 +10,6 @@ sudo cp -v tomcat-users.xml /home/$USER/
 cd /home/$USER/
 sudo mkdir tomcat${version}
 cd /home/$USER/tomcat${version}
-sudo rm -rf apache*
 sudo wget https://downloads.apache.org/tomcat/tomcat-9/v${version}/bin/apache-tomcat-${version}.tar.gz
 sudo tar -xvzf apache-tomcat-9.*
 sudo rm -rf apache*.gz
