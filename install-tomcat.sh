@@ -18,9 +18,9 @@ sudo chmod -R 755 /home/$USER/tomcat${version}/apache-tomcat-9.*
 sudo rm -rfv /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/manager/META-INF/context.xml
 sudo rm -rfv /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/host-manager/META-INF/context.xml
 sudo rm -rfv /home/$USER/tomcat${version}/apache-tomcat-9.*/conf/tomcat-users.xml
-sudo cp /home/$USER/context.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/manager/META-INF/context.xml
-sudo cp /home/$USER/context.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/host-manager/META-INF/context.xml
-sudo cp /home/$USER/tomcat-users.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/conf/tomcat-users.xml
+sudo cp /home/$USER/context.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/manager/META-INF/
+sudo cp /home/$USER/context.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/host-manager/META-INF/
+sudo cp /home/$USER/tomcat-users.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/conf/
 sudo rm -rf /home/$USER/context.xml
 sudo rm -rf /home/$USER/tomcat-users.xml
 cd /home/$USER/tomcat${version}/apache-tomcat-9.*
