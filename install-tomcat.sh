@@ -13,12 +13,11 @@ sudo wget https://downloads.apache.org/tomcat/tomcat-9/v${version}/bin/apache-to
 sudo tar -xvzf apache-tomcat-9.*
 sudo rm -rf apache*.gz
 sudo chmod -R 755 /home/$USER/tomcat${version}/apache-tomcat-9.*
-sudo sleep 3
 sudo rm -rfv /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/manager/META-INF/context.xml
 sudo rm -rfv /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/host-manager/META-INF/context.xml
 sudo rm -rfv /home/$USER/tomcat${version}/apache-tomcat-9.*/conf/tomcat-users.xml
-sudo cp ./tomcat-config/context.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/manager/META-INF/context.xml
-sudo cp ./tomcat-config/context.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/host-manager/META-INF/context.xml
-sudo cp ./tomcat-config/tomcat-users.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/conf/tomcat-users.xml
+sudo cp context.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/manager/META-INF/context.xml
+sudo cp context.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/host-manager/META-INF/context.xml
+sudo cp tomcat-users.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/conf/tomcat-users.xml
 cd /home/$USER/tomcat${version}/apache-tomcat-9.*
 sudo sh bin/startup.sh
