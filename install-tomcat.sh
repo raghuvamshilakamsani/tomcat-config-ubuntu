@@ -6,7 +6,7 @@ echo $version
 sudo apt update
 sudo apt install -y default-jdk wget git
 sudo cp context.xml /home/$USER/
-sudo cp tomcat-users.xml
+sudo cp tomcat-users.xml /home/$USER/
 cd /home/$USER/
 sudo mkdir tomcat${version}
 cd /home/$USER/tomcat${version}
