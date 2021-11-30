@@ -25,4 +25,4 @@ sudo rm -rf /home/$USER/tomcat-users.xml
 cd /home/$USER/tomcat${version}/apache-tomcat-9.*
 sudo sh bin/startup.sh
 echo "username: admin"
-echo "password: goodvibes"
+echo "password: admin"
