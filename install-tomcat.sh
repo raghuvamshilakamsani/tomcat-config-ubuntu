@@ -5,9 +5,9 @@ version=`echo $ver | cut -d " " -f2`
 echo $version
 sudo apt install -y default-jdk wget git
 cd /home/$USER/
-mkdir tomcat${version}
+sudo mkdir tomcat${version}
 cd /home/$USER/tomcat${version}
-rm -rf apache*
+sudo rm -rf apache*
 sudo wget https://downloads.apache.org/tomcat/tomcat-9/v${version}/bin/apache-tomcat-${version}.tar.gz
 sudo tar -xvzf apache-tomcat-9.*
 sudo rm -rf apache*.gz
