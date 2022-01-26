@@ -5,8 +5,6 @@ version=`echo $ver | cut -d " " -f2`
 echo $version
 sudo apt update
 sudo apt install -y default-jdk wget git
-sudo cp -v context.xml /home/$USER/
-sudo cp -v tomcat-users.xml /home/$USER/
 cd /home/$USER/
 sudo mkdir tomcat${version}
 cd /home/$USER/tomcat${version}
@@ -17,12 +15,13 @@ sudo chmod -R 755 /home/$USER/tomcat${version}/apache-tomcat-9.*
 sudo rm -rfv /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/manager/META-INF/context.xml
 sudo rm -rfv /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/host-manager/META-INF/context.xml
 sudo rm -rfv /home/$USER/tomcat${version}/apache-tomcat-9.*/conf/tomcat-users.xml
-sudo cp -v /home/$USER/context.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/manager/META-INF/
-sudo cp -v /home/$USER/context.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/host-manager/META-INF/
-sudo cp -v /home/$USER/tomcat-users.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/conf/
-sudo rm -rf /home/$USER/context.xml
-sudo rm -rf /home/$USER/tomcat-users.xml
+sudo cp -v /home/$USER/tomcat-config-ubuntu/context.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/manager/META-INF/
+sudo cp -v /home/$USER/tomcat-config-ubuntu/context.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/host-manager/META-INF/
+sudo cp -v /home/$USER/tomcat-config-ubuntu/tomcat-users.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/conf/
+sudo rm -rf tomcat-config-ubuntu
 cd /home/$USER/tomcat${version}/apache-tomcat-9.*
 sudo sh bin/startup.sh
 echo "username: admin"
 echo "password: admin"
+sudo chown $USER:ubuntu /home/$USER/tomcat${version}
+sudo chown $USER:ubuntu /home/$USER/tomcat${version}/apache-tomcat-9.*
