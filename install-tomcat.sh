@@ -18,7 +18,7 @@ sudo rm -rfv /home/$USER/tomcat${version}/apache-tomcat-9.*/conf/tomcat-users.xm
 sudo cp -v /home/$USER/tomcat-config-ubuntu/context.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/manager/META-INF/
 sudo cp -v /home/$USER/tomcat-config-ubuntu/context.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/webapps/host-manager/META-INF/
 sudo cp -v /home/$USER/tomcat-config-ubuntu/tomcat-users.xml /home/$USER/tomcat${version}/apache-tomcat-9.*/conf/
-sudo rm -rf tomcat-config-ubuntu
+sudo rm -rf /home/$USER/tomcat-config-ubuntu
 cd /home/$USER/tomcat${version}/apache-tomcat-9.*
 sudo sh bin/startup.sh
 echo "username: admin"
