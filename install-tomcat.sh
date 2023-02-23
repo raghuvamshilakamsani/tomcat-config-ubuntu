@@ -8,7 +8,7 @@ sudo apt install -y default-jdk wget git
 cd /home/$USER/
 sudo mkdir tomcat${version}
 cd /home/$USER/tomcat${version}
-sudo wget https://downloads.apache.org/tomcat/tomcat-9/v${version}/bin/apache-tomcat-${version}.tar.gz
+sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.72/bin/apache-tomcat-9.0.72.tar.gz
 sudo tar -xvzf apache-tomcat-9.*
 sudo rm -rf apache*.gz
 sudo chmod -R 755 /home/$USER/tomcat${version}/apache-tomcat-9.*
